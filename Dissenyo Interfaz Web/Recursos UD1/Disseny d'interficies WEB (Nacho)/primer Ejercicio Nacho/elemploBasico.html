@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <script>
+        let valor;
+
+         function incrementar() {
+            valor = valor+2;
+            let texto = document.getElementById("info");
+            texto.innerHTML = "Inofrmacion Interna. dato="+ valor;
+        }
+
+        function inicializar() {
+            let boton;
+            valor =0;
+            boton = document.getElementById("bSumar");
+            boton.addEventListener("click", incrementar);
+        }
+
+       
+
+        document.addEventListener("DOMContentLoaded", inicializar);
+    </script>
+</head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Document</title>
+
+<body>
+    <button id="bSumar">Incrementar dato</button>
+    <p id="info">Dato =</p>
+</body>
+
+</html>

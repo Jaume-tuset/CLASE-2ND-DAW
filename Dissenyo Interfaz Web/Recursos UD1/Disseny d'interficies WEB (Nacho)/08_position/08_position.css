@@ -1,0 +1,25 @@
+div{
+    border: 1px dashed red;
+}
+.separador{
+    height: 2em;
+    border:initial;
+
+}
+#hijo {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    top:-200px;
+    left: 230px;
+}
+#nieto{
+    position: absolute;
+    height: 40px;
+    width: 60px;
+}
+#padre{
+    width: 500px;
+    height: 40px;
+    position: relative;
+}

@@ -1,0 +1,129 @@
+https://uniwebsidad.com/libros/css/capitulo-2/selectores-avanzados
+
+                            ---------------------
+                            |   SELECTORES CSS  |
+                            ---------------------
+ SELECTORES DE CLASSE
+------------------------
+
+    -  .classname -> clases
+    -  #idname -> id
+
+ SELECTOR UNIVERSAL 
+---------------------
+
+    - *ns
+
+ SELECTOR ATRIBUTO
+---------------------
+
+    - [attr] : selecciona los elementos que tienen establecido el atributo llamado [attr]
+    - [attr=value] : selecciona los elementos que tienen establecido un atributo llamado attr con un valor igual a value.
+    - [attr~=value] : selecciona los elementos que tienen establecido un atributo llamado attr y al menos uno de los valores del atributo es value
+    - [attr|=value] : selecciona los elementos que tienen establecido un atributo llamado attr y cuyo valor es una serie de palabras separadas con guiones, pero comienza con value
+    - [attr^=value] : selecciona los elementos que tienen establecido un atributo llamado attr y cuyo valor es una serie de palabras que comienza con value
+    - [attr$=value] : selecciona los elementos que tienen establecido un atributo llamado attr y cuyo valor es una serie de palabras que contienen el valor value
+    - [attr*=value] : selecciona todos los elementos que tienen establecido un atributo llamado attr y cuyo valor es una serie de palabras que contienen el valor value
+
+
+                            -----------------------
+                            |   COMBINADORES CSS  |
+                            -----------------------
+
+    COMBINADOR DE HERMANOS ADYACENTE
+  --------------------------------------
+  
+        A + B : todos los elementos de B que siguen directamente a A
+
+        + : el segundo elemento(B) sigue directamente al primero(A) y ambos comparten el mismo elemento padre(Body).
+
+
+    COMBINADOR POR COMA 
+  -------------------------------------
+
+        A,B,C : se aplicará a tods los elementos A - B - C 
+
+        , : selector multiple de elementos
+
+
+    COMBINADOR DE UNO O MÁS TIPOS DE SELECTORES
+  -----------------------------------------------
+
+        A.a B.b : se aplicará a tods los elementos dentro de la clase a que contenga A y a todos los elementos dentro de la clase b que contenga B
+
+        x.elemento y.elemento : selector multiple de elementos dentro de la misma clase
+
+
+
+  
+    COMBINADOR GENERAL DE HERMANOS 
+  -------------------------------------
+
+        A ~ B : se aplicará a tods los elementos B que siguen a A
+
+        ~ : el segundo elemento(B) sigue al primero(A)(no necesariamente de forma inmediata) y ambos comparten el mismo elemento padre(Body)
+
+
+    COMBINADOR DE HIJO
+  ------------------------
+
+        A > B : se aplicará a todos los elementos B que son hijos directos de un elemento A
+
+        > : selecciona los elementos que son hijos directos(B) del primer elemento(A).
+
+    
+    COMBINADOR DE DESCENDIENTES
+  -------------------------------
+
+        A  B : se aplicará a todos los elementos B que estan dentro de un elemento A
+
+       ( espacio ) : selecciona los elementos que son descendientes del primer elemento
+
+
+                            ---------------------
+                            |   PSEUDO-CLASSES  |
+                            ---------------------
+
+    SINTAXIS
+  ------------
+
+        selector:pseudoclases{ propiedad : valor }
+
+        :active => activado
+        :checked => confirmado
+        :default => por defecto
+        :disabled => desabilitado
+        :empty => vacio
+        :enabled => habilitado
+        :first => primer elemento seleccionado
+        :first-child => primer elemento entro un grupo de elementos hermanos
+        :first-of-type => representa el primer elemento de su tipo entre un grupo de elementos hermanos
+        :focus => representa un elemento (como una entrada de formulario) que ha recibido el foco.
+        :hover => seleccionar al pasar por encima
+        :in-range => representa un elemento <input> cuyo valor actual se encuentra dentro de los límites de rango especificados por los atributos min y max.
+        :invalid => invalido
+        :last-child => representa el último elemento entre un grupo de elementos hermanos.
+        :last-of-type => representa el último elemento de su tipo entre un grupo de elementos hermanos.
+        :link => representa un elemento que aún no se ha visitado.
+        :nth-child() => coincide con uno o más elementos en función de su posición entre un grupo de hermanos
+          - odd : representa elementos cuya posicion (n) en una serie de hermanos sea impar(1,3,5,7) EX: 5n
+          - even : representa elementos cuya posicion (n) en una serie de hermanos sea par(2,4,6,8)  EX: 2n
+        :nth-last-child() => selecciona uno o más elementos en función de su posición entre un grupo de hermanos, contando desde el final
+          - odd : representa elementos cuya posicion (n) en una serie de hermanos sea impar(1,3,5,7) EX: 5n
+          - even : representa elementos cuya posicion (n) en una serie de hermanos sea par(2,4,6,8)  EX: 2n
+        :nth-last-of-type() => coincide con uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos, contando desde el final
+        :nth-of-type() => selecciona uno o más elementos de un tipo dado, en función de su posición entre un grupo de hermanos
+        :only-child => representa un elemento sin hermanos. Esto es lo mismo que :first-child:last-child o :nth-child(1):nth-last-child(1), pero con una especificidad menor
+        :only-of-type => representa un elemento que no tiene hermanos del mismo tipo
+        :out-of-range => representa un elemento <input> cuyo valor actual está fuera de los límites de rango especificados por los atributos min y max
+        :read-only => representa un elemento que ya no es editable por el usuario 
+        :read-write => representa un elemento (como un input) que es editable por el usuario
+        :required => requerrido
+        :root =>  selecciona el elemento raíz de un árbol que representa el documento
+        :valid => valido
+        :visited => visto
+
+
+
+
+                        

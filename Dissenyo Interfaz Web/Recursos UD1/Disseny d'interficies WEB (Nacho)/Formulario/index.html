@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+
+    <script>
+        bbddCoches = {
+            "Fiat": ["tipo", "500", "500x"],
+            "Renault": ["tipo", "500", "500x"],
+            "Ferrari": ["tipo", "500", "500x"],
+            "Citroen": ["tipo", "500", "500x"],
+            "Seat": ["toledo", "ibiza", "cordoba"],
+            "Mercedez": ["tipo", "500", "500x"],
+            "Bugati": ["tipo", "500", "500x"],
+        };
+        function inicializar() {
+            console.log("ini");
+            let compColor = document.getElementById("Color");
+            compColor.addEventListener("change", pintar);
+
+            let compRev = document.getElementById("revoluciones");
+            compRev.addEventListener("input", cambiarRevoluciones);
+
+            let compFot = document.getElementById("imagenElegida");
+            compFot.addEventListener("change", cambiarFoto);
+            let compMarcas = document.getElementById("marcas");
+            compMarcas.addEventListener("change", rellenarModelos);
+        }
+        function rellenarModelos() {
+            let compMarcas = document.getElementById("marcas");
+            let compModelo = document.getElementById("modelo");
+
+            while (compModelo.firstChild) {
+                compModelo.removeChild(compModelo.firstChild);
+            }
+            
+            let modelos = bbddCoches[compMarcas.value];
+
+            modelos.forEach( function(model) {
+                let nuevaOpcion = document.createElement("option");
+                nuevaOpcion.value = model;
+                nuevaOpcion.innerHTML = model;
+                console.log("model"+model);
+                compModelo.append(nuevaOpcion);
+            }
+                
+            );
+            
+           
+            /*let option = evt.currentTarget.selectedOptions[0];
+                    infoElement.innerHTML = `<option>${option.dataset.info}</option> `;
+    
+                });
+    
+    
+                let compModelo = document.getElementById("modelo");
+                modelo.array.forEach((bbddCoches) => {
+                    const optionElement = document.createElement("option");
+                    optionElement.setAttribute("value", modelo.name);
+                    optionElement.textContent = modelo.name;
+    
+                    optionElement.dataset.info = JSON.stringify(modelo);
+                    compModelo.append(optionElement);
+                });*/
+        }
+
+        function pintar() {
+            let compCol = document.getElementById("Color");
+            let valorElegido;
+            valorElegido = compCol.value;
+            let compMostrarColor = document.getElementById("colorDiv");
+            compMostrarColor.innerHTML = "" + compCol.value;
+            compMostrarColor.style.backgroundColor = compCol.value;
+        }
+
+        function cambiarRevoluciones() {
+            let compRev = document.getElementById("revoluciones");
+            let valorElegido;
+            valorElegido = compRev.value;
+
+            let compMostrarRev = document.getElementById("muestraRev");
+            compMostrarRev.innerHTML = "" + valorElegido + "rev/min";
+        }
+
+        function cambiarFoto() {
+            let botonSelFoto = document.getElementById("imagenElegida");
+            const archivos = botonSelFoto.files;
+            console.log("fichero a cargar");
+
+            let compImg = document.getElementById("visualizacion");
+
+            if (!archivos || !archivos.length) {
+                compImg.src = "";
+                return;
+            }
+
+            const primerArchivo = archivos[0];
+            const objectURL = URL.createObjectURL(primerArchivo);
+            compImg.src = objectURL;
+        }
+
+        document.addEventListener("DOMContentLoaded", inicializar);
+    </script>
+</head>
+
+<body>
+    <form action="POST" autocomplete="on">
+        <fieldset>
+            <label for="marcas">marcas</label>
+            <select name="marcas" id="marcas">
+                <option value="Fiat">Fiat</option>
+                <option value="Renault">Renault</option>
+                <option value="Ferrari">Ferrari</option>
+                <option value="Citroen">Citroen</option>
+                <option value="Seat">Seat</option>
+                <option value="Mercedez">Mercedez</option>
+                <option value="Bugati">Bugati</option>
+            </select>
+
+            <label for="modelo">Model:</label>
+            <select type="text" autofocus required id="modelo" style="width: 20em"></select>
+            <label for="pais">Pais</label>
+            <select name="paises" id="pais">
+                <optgroup label="America"></optgroup>
+                <option value="USA">USA</option>
+                <option value="Canada">Canada</option>
+                <option value="Mexico">Mexico</option>
+                <optgroup label="Europa"></optgroup>
+                <option value="España">España</option>
+                <option value="Italia">Italia</option>
+                <option value="Alemania">Alemania</option>
+                <option value="Francia">França</option>
+                <optgroup label="Asia"></optgroup>
+                <option value="Japon">Japon</option>
+                <option value="China">China</option>
+                <option value="Korea">Korea</option>
+            </select>
+        </fieldset>
+        <br />
+        <label for="TipoMotor">Tipo de Motor:</label>
+        <select name="TipoMotor" id="TipoMotor">
+            <option value="12v">12v</option>
+            <option value="10v">10v</option>
+            <option value="8v">8v</option>
+            <option value="6v">6v</option>
+            <option value="6L">6L</option>
+            <option value="4Boxer">4Boxer</option>
+            <option value="4Linea">4Linea</option>
+        </select>
+
+        <br />
+        <label for="cilindrada">Cilindrada:</label>
+        <input type="text" name="Cilinrada" id="cilindrada" required pattern="[1-9][0-9]{2,3}(cc){0,1}" />
+        <br />
+        <br />
+        <label for="revoluciones">Revoluciones/min:</label>
+        <br />
+        <input type="range" step="100" min="2000" max="140000" id="revoluciones" />
+        <div id="muestraRev">0</div>
+        <br />
+        <input type="color" name="color" id="Color" />
+        <div id="colorDiv">Esto es el color elegido</div>
+        <br />
+        <input type="file" name="Imagen" id="imagenElegida" multiple accept="image/png, image/jpeg" />
+        <img id="visualizacion" />
+
+        <br />
+        <input type="submit" value="Enviar" />
+        <input type="reset" value="Reiniciar" />
+    </form>
+</body>
+
+</html>

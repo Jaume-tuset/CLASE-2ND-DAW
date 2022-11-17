@@ -1,0 +1,20 @@
+/*:root{
+    font-size: 0.35cm;
+}*/
+div{
+    border: solid green 2px;
+}
+span{
+    background-color: lightgreen ;
+}
+.emx14{
+    font-size:1.4em ;
+}
+.remx14{
+    background-color: lightcoral;
+    font-size: 1rem;
+}
+.decimoAnchoAlto{
+    border:1px solid green;
+    height: 10vw;
+}

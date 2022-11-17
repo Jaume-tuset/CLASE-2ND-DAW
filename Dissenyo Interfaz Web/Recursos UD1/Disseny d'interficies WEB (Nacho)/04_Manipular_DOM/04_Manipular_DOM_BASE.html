@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="va_ES">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="./04_Manipular_DOM.css">
+
+<style>
+/**********  PON TUS ESTILOS AQU� ****************/
+
+</style>
+
+<script>
+'user strict';
+/* PON TUS VARIABLES JS AQU� */
+
+
+
+/************ FUNCI�N INICIALIZAR *******************/
+function inicializar(){
+  let versos = document.getElementsByClassName("versos");
+  let divs = document.getElementsByTagName("div");
+
+  let arrayDivs = Array.from(divs);
+
+  arrayDivs.forEach(function name(unDiv) {
+    console.log("Lista de clase: "+ unDiv.classList +" . " + unDiv.className);
+  });
+ 
+  let elemPrecios = document.getElementById("Precios");
+  let pes = elemPrecios.getElementsByTagName("p")
+  
+  for (let pe of pes) {
+    console.log("p de Precios "+pe.innerHTML);
+  }
+  let conChildren = elemPrecios.children;
+  console.log("------------Children------------");
+  for (let elem of conChildren) {
+    console.log("child: "+elem.innerHTML);
+  }
+  let contNodes = elemPrecios.childNodes;
+  for (let elem of contNodes) {
+    console.log("node: "+elem.innerHTML+ " - "+elem.textContent);
+  }
+  
+  let secciones = document.getElementsByTagName("section");
+  let ultima = secciones[secciones.length-1 ];
+  
+  let arraySecciones = Array.from(secciones);
+  utlima = arraySecciones.pop();
+
+  console.log(" i de la última seccion " + ultima.id);
+  let menuSeleccion = document.querySelectorAll("#menu > section.rojo");
+  for (let selector of menuSeleccion) {
+    console.log(selector.innerHTML +" ");
+  }
+  
+  let tablas= document.getElementsByTagName("table");
+  let arrayTablas= Array.from(tablas);
+  arrayTablas.forEach((unaTabla) =>{
+    console.log("vamos allá con una tabla");
+    let bodyTabla = unaTabla.getElementsByTagName("tbody");
+
+
+    mostrarBodyTabla(bodyTabla[0]);
+    console.log("---------------------------------");
+    //mostrarBodyTablaTranspuesto(bodyTabla[0]);
+  });
+
+  function mostrarBodyTabla(bodyTabla) {
+
+    let FilasTabla = bodyTabla.getElementsByTagName("tr");
+    let arrayFilas=Array.from(FilasTabla);
+    arrayFilas.forEach(fila => {
+      let ColumnasFila = fila.getElementsByTagName("td");
+      let arrayColumnas=Array.from(ColumnasFila);
+      arrayColumnas.forEach(columna => {
+        console.log(columna.innerHTML);
+      });
+      console.log("");
+    });
+   
+  }
+}
+
+/********** DOMContentLoaded ***********************/
+document.addEventListener("DOMContentLoaded", inicializar);
+</script>
+
+</head>
+<body>
+<div id="restaurante" > Restaurante Juan Garc&iacute; </div>
+<div class="rojo verso">  Rojo como el tomate </div>
+<div class="azul verso">  Azul como el nosequ$eacute;</div>
+<div class="verde verso"> Verde como la aceituna verde </div>
+<div class="verde verso">  Verde como el verde lim&oacute;n</div>
+<div class="separador"> </div>
+
+<div id="menu" > Men&uacute;
+  <section class="rojo margen-izquierdo" > Primeros platos
+      <div class="azul margen-izquierdo"> Ensalada
+          <span class="rojo">  con tomate y lechuga </span> 
+      </div>
+      <div class="azulmargen-izquierdo" > Salmorejo
+        <span class="rojo">  Gazpacho suave </span> 
+    </div>
+  </section>
+    <section class="rojo margen-izquierdo" > Segundos platos
+      <div class="azul margen-izquierdo" > Entrecot
+          <span class="rojo">  Con patatas fritas </span> 
+      </div>
+      <div class="azul margen-izquierdo" > Merluza
+        <span class="rojo">  Como la que da el vino </span> 
+    </div>
+  </section>
+    <section class="azul margen-izquierdo" > Postre
+      <div class="rojo margen-izquierdo" > Natillas
+          <span class="verde">  Caseras </span> 
+      </div>
+      <div class="azul margen-izquierdo" > Fruta de tiempo
+        <span class="rojo">  Con cuchillo que no corta </span> 
+    </div>
+  </section>
+</div>
+<div class="separador"> </div>
+
+<div id="Precios" > Precios 
+	<p class="azul" >  Si comes a gusto: 12 euros</p>
+	<div class="verde"> Si comes a disgustro: 15 euros</div>
+	<p class="rojo" >  Si no comes: 20 euros</p>
+</div>
+<div class="separador"> </div>
+
+
+<section id="ultimaSeccion" class="Clientes margen-izquierdo">
+<h2 id="h2Tabla">Clientes Favoritos</h2>
+<table id="laTabla">
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Correo</th>
+    </tr>
+  </thead>
+  <tbody id="cuerpoTabla">
+    <tr>
+      <td>Enrique</td>
+      <td>Hambre Tengo</td>
+      <td>john@example.com</td>
+    </tr>
+    <tr>
+      <td>Dolores</td>
+      <td>Fuertes de Barriga</td>
+      <td>mary@mail.com</td>
+    </tr>
+    <tr>
+      <td>Martin</td>
+      <td>Gala </td>
+      <td>july@greatstuff.com</td>
+    </tr>
+    <tr>
+      <td>Far</td>
+      <td>Lopa Delabuena</td>
+      <td>a_r@test.com</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+<div id="direcciones"> </div>
+</body>
+</html>

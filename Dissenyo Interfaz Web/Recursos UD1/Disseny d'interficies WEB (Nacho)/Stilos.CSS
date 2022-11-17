@@ -1,0 +1,42 @@
+
+[miAtributo="Si"]{
+    color:green;
+}
+p.importante{
+    background-color: red;
+}
+.importante.urgente{
+    text-decoration: overline;
+}
+
+
+
+p span{
+    text-decoration: underline;
+}
+
+p >span{
+    background: yellow;
+    color: blue;
+}
+
+article div{
+    text-decoration: underline;
+    border:5px solid pink;
+}
+
+article > div{
+    background: lightblue;
+}
+
+h1 + h2 {
+
+    color:blue;
+
+}
+h1~h3{
+    background: lightgreen;
+    color:blue;
+}
+
+

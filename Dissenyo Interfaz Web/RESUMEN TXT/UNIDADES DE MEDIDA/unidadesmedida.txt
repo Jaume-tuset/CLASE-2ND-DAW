@@ -1,0 +1,26 @@
+https://uniwebsidad.com/libros/css/capitulo-3/unidades-de-medida
+
+            UNIDADES DE MEDIDA
+
+    UNIDADES ABSOLUTAS 
+   -----------------------
+
+in : pulgadas (2.54cm)
+cm : centrimetros
+mm : milimetros
+pt : puntos (0.35mm)
+pc : picas (4.23mm)
+vw : (ViewportWidht) cambiar tamaño respecto el ancho del dispositivo (50%)
+vh : (ViewportHeight) cambiar tamaño respecto el ancho del dispositivo (50%)
+
+
+    UNIDADES RELATIVAS
+   ---------------------
+
+em : relativa respecto del tamañ de la letra del elemento
+ex : relativa respecto de la altura de la letra x() del tipo y tamaño
+px : (pixel) relativa respecto de la resolución de la pantalla del dispositivo en que el que se visualiza
+
+
+emx14 : 
+remx14 : 
