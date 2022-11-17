@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activitat 7 </title>
+</head>
+<body>
+    <div id="quadrat">
+        <div id="quadrat_dins"></div>
+    </div>
+    <style>
+        #quadrat {
+            width: 400px;
+            height: 400px;
+            border: 2px solid #aaa;
+            border-radius: 5px;
+        }
+        
+        #quadrat_dins {
+            width: 200px;
+            height: 200px;
+            margin: 100px 0 0 100px;
+            border: 2px solid #aaa;
+
+            border-radius: 5px;
+            background-color: tomato;
+        }
+
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            let dins=document.querySelector("quadrat_dins");
+            let fora=document.querySelector("quadrat");
+            
+            fora.addEventListener("click",function(e){
+                if(e.target == fora){
+                    console.log("Fora");
+                }else{
+                    console.log("Dins");
+                }
+            });
+
+
+
+
+        })
+    </script>
+</body>
+</html>
