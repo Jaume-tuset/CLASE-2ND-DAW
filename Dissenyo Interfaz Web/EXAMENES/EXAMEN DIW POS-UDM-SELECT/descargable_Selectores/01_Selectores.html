@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="01_Selectores.css" />
+  </head>
+  <body>
+    <h1>h1</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <div></div>
+
+    <h1>h1</h1>
+    <h1 class="importante">h1</h1>
+    <div id="inicial">
+      <h2>h2</h2>
+
+      <div class="descripcion">descripcion</div>
+      <div>div normal 1 interno a "inicial"</div>
+      <div>div normal 2 interno a "inicial"</div>
+      <div>div normal 3 interno a "inicial"</div>
+    </div>
+    <div>
+      div normal 1
+      <div class="descripcion importante">descripcion interna</div>
+    </div>
+    <h2>h2</h2>
+    <div>
+      div normal 2
+      <div>interno al normal 2</div>
+      <div class="descripcion relevante">descripcion interna</div>
+    </div>
+
+    <h1>h1</h1>
+    <div>Texto normalillo, sin pretensiones</div>
+    <h2>h2</h2>
+
+    <div class="descripcion importante">
+      descripcion
+      <span class="relevante">
+        descripcion dentro
+        <div class="importante">Muy importante.</div>
+        ¿Te queda claritono?</span
+      >
+    </div>
+
+
+	<!-- HASTA AQUI-->
+
+    <article>
+      <h1>Enunciado</h1>
+      Salvo indicación contraria, los requisitos de estilo son generales,
+      requisitos posteriores están por encima de los anteriores. Cada elemento
+      de la lista debería ser una regla css o una solución añadida. Es decir ,
+      no haga dos o más reglas para algo que se puede hacer con una regla
+      directamente
+      <ol>
+        <li>
+          Los elementos h1, h2 y h3 deberan tener el color verde (color:green;)
+        </li>
+        <li>
+          Los elementos de cualquiera de las clases importante o relevante
+          estarán en rojo (color:red;)
+        </li>
+
+        <li>
+          los elementos de la clase importante que están dentro de un span que a
+          su vez está dentro de un div deben aparecer con letra "Courier New"
+          (font-family: Courier New;) y un borde 1px dashed blue; y además no
+          deben provocar un salto de línea allá donde estén
+        </li>
+
+        <li>
+          Los h2 que están dentro de un div, tienen un tamaño de letra igual al
+          del div donde están
+        </li>
+
+        <li>
+          Todos los h1 y h2 que aparecen después de dos divs que entre ellos van
+          consecutivos, tienen el color original de esos elementos y su tamaño
+          de letra es el doble de la del documento
+        </li>
+        <li>
+          Cualquier elemento que sea de ambas clases descripción e importante,
+          tendrá el color de fondo lightpink
+        </li>
+        <li>
+          Cualquier div que esté dentro de otro div tendrá el color del texto
+          azul (color:blue)
+        </li>
+      </ol>
+    </article>
+  </body>
+</html>

@@ -1,0 +1,66 @@
+body {
+    background-color: white;
+}
+
+.container-base {
+    background-color: beige;
+
+}
+
+.flex-base {
+    display: flex;
+}
+
+.flex-inicial {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-end;
+    align-content: flex-start;
+}
+
+
+.item-base {
+    color: aliceblue;
+    background-color: purple;
+    /*width:60px;*/
+    height: 30px;
+    border: 1px solid black;
+    margin: 0.5em;
+}
+
+.flexgrow2 {
+    flex-grow: 2;
+    background-color: darkgray;
+}
+
+.flexgrow5 {
+    flex-grow: 7;
+    background-color: orange;
+}
+
+/*
+.fbasis10 {
+    flex-basis: 10em;
+    background-color: crimson;
+    color: black;
+}
+
+.fbmw {
+    background-color: darkblue;
+    flex-basis: 5em;
+    min-width: 10em;
+
+}
+
+.fbfsmw {
+    background-color: lightsalmon;
+    flex-shrink: 0;
+    flex-basis: 10em;
+    min-width: 5em;
+}
+*/
+.objetivo {
+    flex-grow: 3;
+    background-color: grey;
+}

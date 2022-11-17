@@ -1,0 +1,39 @@
+/* css JAUME TUSET 2nd DAW*/
+.relleno {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	height:30px;
+	border:1px dashed lightgray;
+}
+
+
+div {
+	border: 1px solid pink;
+	display: block;
+}
+
+.Ciudad {
+	padding: 1%;
+	display: block;
+}
+
+.Calle {
+	width: 45%;
+	position: relative;
+	left: 2%;
+}
+
+.Barrio {
+	position: static;
+	display: block;
+}
+
+#Rafelguaraf{
+	position: relative;
+}
+
+/* no estan instanciades les clases importante ni secundario*/
+.importante > .secundario {
+	align-content: center;
+}

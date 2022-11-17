@@ -1,0 +1,42 @@
+div {
+	border:1px solid orange;
+
+}
+
+.hor {
+	width:400px;
+	height:40px;
+}
+
+.ver {
+	width:40px;
+	height:400px;
+}
+
+#uno {
+	position:absolute;
+	top:250px;
+	left:50px;
+	z-index:3;
+}
+#dos {
+	position:absolute;
+	top:10px;
+	left:100px;
+	z-index:2;
+}
+#tre {
+	position:absolute;
+	top:70px;
+	left:70px;
+	z-index:-4;
+}
+#cua {
+	position:absolute;
+	top:40px;
+	left:280px;
+	z-index:-1;
+}
+
+
+

@@ -1,0 +1,47 @@
+body{
+    background-color: lightyellow;
+}
+
+.gc{
+    margin: 1em;
+    display: grid; /* tabla */
+ 
+}
+
+/* REGLA para pintar en un borde tots els divs que estan dins del grid*/
+.gc > div {
+	border:1px solid black;
+}
+
+.gc:first-of-type{
+    background-color: lightblue;
+}
+
+.gc:last-of-type{
+    background-color: green;
+}
+
+/** solo determino filas no columnas */
+.gc:nth-of-type(2){
+    background-color: lightpink;
+    grid-template-columns: auto auto auto;
+}
+/** determino 3 filas y 2 columnas , que son insuficientes */
+.gc:nth-of-type(3){
+    background-color: lightgreen;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto 50%;
+}
+
+/* Establecer el ancho o alto por píxeles */
+.gc:nth-of-type(4) {
+	background-color:orange;
+	grid-template-columns: 100px auto auto;
+}
+
+/** Provar paraula per vore com afecta 
+.gc:nth-of-type(4) {
+	background-color:orange;
+	grid-template-columns: 100px auto auto;
+}
+*/

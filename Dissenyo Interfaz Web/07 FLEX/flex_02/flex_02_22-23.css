@@ -1,0 +1,128 @@
+body {
+	background-color:white;
+}
+
+.container-base {
+	background-color:beige;
+
+}
+
+.container-alto {
+	background-color:lightgreen;
+	height:300px;
+}
+
+.flex-base{
+	display:flex;
+}
+
+.flex-inicial{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	align-items:flex-end;
+	align-content:flex-start;
+}
+
+
+.item-base {
+	color:aliceblue;
+	background-color:purple;
+	/*width:60px;*/
+	height:30px;
+	border:1px solid black;
+	margin:0.5em;
+}
+
+.item-minh{
+	color:aliceblue;
+	background-color:purple;
+	width:60px;
+	min-height:30px;
+	border:1px solid black;
+	margin:0.5em;
+	font-size:3em;
+}
+
+.item-sinDimensiones {
+	color:aliceblue;
+	background-color:purple;
+	border:1px solid black;
+	margin:0.5em;
+	height:50px;
+}
+
+.flexgrow1{
+	background-color:green;
+	flex-grow:1;
+
+}
+
+.flexgrow4{
+	background-color:lightgreen;
+	flex-grow:4;
+
+}
+
+.fbasis10{
+	flex-basis:10em;
+	background-color:crimson;
+	color:black;
+}
+
+.fbasis10shrink0{
+	flex-basis:10em;
+	flex-shrink:0;
+	background-color:darkcyan;
+}
+
+
+.fbmw{
+	background-color:darkblue;
+	flex-basis:5em;
+	min-width:10em;
+
+}
+
+.fbfsmw{
+	background-color:lightsalmon;
+	flex-shrink:0;
+	flex-basis:10em;
+	min-width:5em;
+}
+/* Seleccionamos el elemento "8" del segundo contenedor*/
+
+.flex-inicial:nth-of-type(2) div:nth-child(8)  {
+	background-color:lightpink;
+	color:blue;
+	align-self:flex-start;
+}
+
+.flex-basis4em{
+	flex-basis:4em;
+	background-color:olive;
+}
+
+.flex-basis1em{
+	flex-basis:1em;
+	background-color:blue;
+}
+
+.anchura10px{
+	width:10px;
+	background-color:orange;
+	color:blue;
+
+}
+
+.fbasisvswidth{
+	background-color:pink;
+	flex-basis:4em;
+	width:10px;
+	color:blue;
+	
+
+}
+
+
+

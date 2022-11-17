@@ -1,0 +1,70 @@
+
+div{
+    border: 2px dashed red;
+}
+img{
+    position: relative;
+    top: 20px;
+    left: 2em;
+}
+
+#primer{
+    position: static;
+}
+
+#segon{
+    position: static;
+}
+
+#tercer{
+    padding: 2%;    
+    position: static;
+}
+
+.separador{
+    height: 2em;
+    border: initial;
+    background-color: #c6c6c6;
+}
+span {
+    position: relative;
+    left: -30px;
+    top: 30px;
+    background-color: pink;
+}
+#quinto{
+    width: 40em;
+    position: absolute;
+    bottom: 200px;
+    right: 4cm;
+    background-color: burlywood;
+}
+
+#sexto{
+    position: relative;
+}
+
+#sexto > span {
+    position: absolute;
+    left: -30px;
+    top: 20px;
+    background-color: #c5c4c3;
+}
+
+#cer1{
+    background-color: green;
+    color: antiquewhite;
+    position: sticky;
+}
+
+#cer2{
+    background-color: green;
+    color: antiquewhite;
+    position: sticky;
+}
+
+#cer3{
+    background-color: green;
+    color: antiquewhite;
+    position: sticky;
+}

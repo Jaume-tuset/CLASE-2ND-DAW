@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="01_Selectores.css" />
+  </head>
+  <body>
+
+<h1>h1 </h1>
+<h2>h2 </h2>
+
+<div > </div>
+
+<h1>h1 </h1>
+<h1>h1 </h1>
+<div><h2>h2 </h2>
+
+<div class="descripcion"> descripcion</div>
+
+<div > div normal 1 interno a "descripcion"</div>
+<div > div normal 2 interno a "descripcion" </div>
+<div > div normal 3 interno a "descripcion" </div>
+</div>
+<div > div normal 1 <div class="descripcion"> descripcion interna</div></div>
+<h1>h1 (h1+h1+h2)</h1>
+<h1 id="especial">h1 especial </h1>
+<h2>h2 (h1+h1+h2)</h2>
+
+<div class="descripcion"> descripcion<span class="descripcion"> descripcion dentro </span></div>
+
+<p> p </p>
+
+<p class="conclusion"> p.conclusion</p>
+
+<div class="descripcion"> descripcion  <span> descripcion dentro </span></div>
+<p></p>
+<div id="divA"> DIV identificado identificador "divA"
+	<h2> h2 dentro de DIV</h2>
+	<div > DIV normal dentro de DIV</div>
+</div>
+
+<div class="conclusion">
+	<h2> h2  dentro de Div class="conclusion"</h2>
+	<div > div normal dentro de Div class="conclusion" hermano del h2 anterior</div>
+</div>
+<p class="descripcion"> p.descripcion</p>
+
+<p class="conclusion" id="final"> conclusion final</p>
+
+<article>
+<h1>Enunciado</h1>
+Salvo indicación contraria, los requisitos de estilo son generales, requisitos posteriores están por encima de los anteriores
+<ol>
+
+	<li>Los elementos h1 y h2 tienen un tamaño de letra 1.2 veces el tamaño de letra normal y carecen de margen "font-size" y "margin"</li>
+	<li>Los elementos h2 no tienen la letra negrita "font-weigth:normal"</li>
+	<li>Todos los textos con la palabra descripcion deben aparecer en itálica "font-style:italic"</li>
+	<li>Todo lo que esté dentro de un div debe aparecer en mayúsculas pequeñas "font-variant:small-caps"<strong> esto está mal enunciado. Mejor: "Todos los elementos internos de un div deben estar en mayúsculas pequeñas, pero el texto directamente insertado no</strong></li>
+	<li>Cualquier h2 que esté a continuación de dos h1 que están seguidos deberá tener el fondo amarillo y el color de la letra verde "color:green"</li>
+	<li>Todo elemento con la palabra "descripcion" que esté dentro de un div estará subrayado "text-decoration:underline;"</li>
+	<li>Cualquier div que siga a un h2 deberá aparecer en azul claro y con box shadow "background-color:lightblue;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 33, 1);"</li>
+	<li>Observa la imagen de la solución y verás un texto en blanco sobre fondo negro. Ese elemento y sólo ese debe tener 
+	su estilo en la hoja de estilos de lasolución</li>
+	<li>El primer div que sigue a un elemento con lapalabra descripcion debe estar en color magenta, el resto de divs que vengan después
+	 aunque no vayan consecutivos tendrán un margen horizontal y el color será azul</li>
+	<li>Cualquier elemento interno a un p que contenga la palabra descripción tendrá el color naranja</li>
+	<li>Cualquier párrafo con la palabra conclusión que aparezca en algún lugar después de un div estará en fondo beige y con unmargen pequeño</li>
+	<li>El div identificado "divA" tendrá 	border:3px dotted darkblue; sólo para
+ese elemento, sin añadir ningún elemento al fichero de estilos</li>
+	<li>El último párrafo y sólo ese está en fondo rosa usando la hoja de estilos</li>
+
+</ol>
+
+La siguiente regla debe aparecer
+<pre>
+span { /* se queda */
+	font-style:normal;
+	background-color:lightgrey;
+}
+
+</pre>
+</article>
+  </body>
+</html>

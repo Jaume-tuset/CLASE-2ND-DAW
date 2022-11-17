@@ -1,0 +1,164 @@
+body {
+	background-color:white;
+}
+
+.container-base {
+	background-color:lightyellow;
+
+}
+
+.item-base {
+	color:aliceblue;
+	background-color:purple;
+	width:60px;
+	height:30px;
+	border:1px solid black;
+	margin:0.5em;
+}
+
+.flex-basico-00 {
+	display:flex;
+	/* flex-direction:row;*/ 
+}
+
+.flex-vertical-01 {
+	display:flex;
+	flex-direction: column;
+}
+
+.flex-wrap-02 {
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.flex-rowReverse-03 {
+	display:flex;
+	flex-direction: row-reverse;
+}
+
+.flex-colwrap-04 {
+	display:flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 150px;
+}
+
+/* justify-content  align-content, place-items, align-self */
+
+.flex-justify-end-05{
+	display:flex;
+	flex-direction:row;
+	justify-content: flex-end;
+}
+
+
+.flex-justify-between-06{
+	display:flex;
+	flex-direction:row;
+	justify-content: space-between;
+}
+
+.flex-justify-around-07{
+	display:flex;
+	flex-direction:row;
+	justify-content: space-around;
+}
+
+.flex-justify-evenly-08{
+	display:flex;
+	flex-direction:row;
+	justify-content: space-evenly;
+}
+
+.container-alto {
+	background-color:lightgreen;
+	height:200px;
+}
+
+.flex-align-end-09{
+	display:flex;
+	flex-direction:row;
+	align-items:flex-end;
+
+}
+.flex-align-center-10{
+	display:flex;
+	flex-direction:row;
+	align-items:center;
+
+}
+.flex-align-stretch-11{
+	display:flex;
+	flex-direction:row;
+	align-items:stretch;
+
+}
+
+.flex-align-baseline-12{
+	display:flex;
+	flex-direction:row;
+	align-items:baseline;
+
+}
+
+.item-minh{
+	color:aliceblue;
+	background-color:purple;
+	width:60px;
+	min-height:4em;
+	border:1px solid black;
+	margin:0.5rem;
+	font-size:2em;
+}
+.item-sinAltura {
+	color:aliceblue;
+	background-color:purple;
+	width:60px;
+	border:1px solid black;
+	margin:0.5em;
+}
+
+.item-sinDimensiones {
+	color:aliceblue;
+	background-color:purple;
+	border:1px solid black;
+	margin:0.5em;
+	height:50px;
+}
+
+
+.flex-alignContent-flex-end-13{
+	display:flex;
+	flex-wrap:wrap;
+	flex-direction:row;
+	align-items:flex-end;
+	align-content:flex-start;
+	height:300px;
+
+}
+
+.flex-alignContent-flex-end-13:nth-of-type(2) div:nth-child(8)  {
+	background-color:lightpink;
+	color:blue;
+	align-self:flex-start;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

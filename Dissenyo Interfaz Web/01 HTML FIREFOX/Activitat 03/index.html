@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario actividad 3</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2></h2>
+    <table>
+        <tbody>
+            <form action="formulario" method="post">
+                <tr>
+                    <td colspan="3" style="border: 2px solid black;">
+                            <div id="Marca">
+                                <label for="marca">Marca</label>
+                                    <select name="marca" id="marca">
+                                        <option value="ma1">Renault</option>
+                                        <option value="ma2">Fiat</option>
+                                        <option value="ma3">Citroen</option>
+                                    </select>
+                            </div>
+                            <div id="Modelo">
+                                <label for="modelo">Modelo</label>
+                                <select name="modelo" id="modelo" style="width: 15em;"  autofocus required ></select>
+                            </div> 
+                            <div id="Pais">
+                                <label for="pais_fabricacion">Pais Fabricación</label>
+                                <select name="pf" id="pf">
+                                    <optgroup id="pf1">America
+                                        <option value="pf1a">USA</option>
+                                        <option value="pf1b">Canada</option>
+                                        <option value="pf1c">Mexico</option>
+                                    </optgroup>
+                                    <optgroup id="pf2">Europa
+                                        <option value="pf2a">España</option>
+                                        <option value="pf2b">Italia</option>
+                                        <option value="pf2c">Alemania</option>
+                                    </optgroup>
+                                    <optgroup id="pf3">Asia
+                                        <option value="pf3a">Japón</option>
+                                        <option value="pf3b">China</option>
+                                        <option value="pf3c">Korea</option>
+                                    </optgroup>
+                            </select>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div id="Cilindrada_text">
+                            <label for="Cilindrada">Cilindrada :</label>
+                            <input type="text" id="cilin">
+                        </div>
+                        <div id="tpm">
+                             <label for="tpmotor">Tipo de motor :  </label>
+                                <select name="tpmotor" id="tpmotor">
+                                    <option value="tpm1">12V</option>
+                                    <option value="tpm2">10V</option>
+                                    <option value="tpm3">8V</option>
+                                    <option value="tpm4">6V</option>
+                                    <option value="tpm5">6L</option>
+                                    <option value="tpm6">4Boxer</option>
+                                    <option value="tpm7">4Linea</option>
+                                </select>
+                        </div>
+                        <div id="cld">
+                             <label for="cilindrada">Revolcuiones/min :</label>
+                                <input type="range" name="cilin" id="revoluciones" ep="100" min="4000" max="22000">
+                                <div id="muestraRev">000</div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div id="foto_archivo">
+                                <label for="Foto">Fotográfia:</label>
+                                    <input type="file" name="foto" id="foto" multiple accept="images/png, images/jpeg">
+                        </div>
+                        <div id="velocidad_maxima">
+                            <label for="Vel_max">Velocidad Maxima :
+                                <input type="text" name="vel_max" id="velMax" minlength="3">
+                            </label>
+                        </div>
+                        <div id="comb">
+                            <label>Combustible :</label>
+                            <fieldset style="border: 1px solid black; padding: 4%;">
+                                <a>Combustible : </a><br>
+                                <input type="checkbox" name="combustible"> gasolina <br>
+                                <input type="checkbox" name="Combustible"> diesel   <br>
+                                <input type="checkbox" name="Combustible"> Alchol   <br>
+                            </fieldset>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div id="produccion">
+                            <label for="Produ">En Producción : </label>
+                                <input type="checkbox" name="produ" id="produ">
+                        </div>
+                        <div id="Ci">
+                            <label for="CI">Código Interno 
+                                <input type="text" id="ci" pattern="[1-9][0-9]{2,3}">
+                            </label>
+                        </div>
+                        <div id="color_Coche">
+                            <label for="Color coche">Color del coche : <br>
+                                <input type="color" id="color">
+                            </label>
+                        </div>  
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <div id="cx1">
+                            <fieldset>
+                                Dirección Asistida <input type="checkbox" name="opciones" id="cx1opc"><br>
+                                Elevalunas Eléctrico <input type="checkbox" name="opciones" id="cx1opc"><br>
+                                RadioCassete <input type="checkbox" name="opciones" id="cx1opc"><br>
+                            </fieldset>
+                        </div>
+                        <div id="send_reset">
+                             <label for="send">
+                                <input type="submit" name="send" id="send">
+                                <input type="reset" name="reset" id="reset">
+                            </label>
+                        </div>
+                    </td>
+                </tr>
+            </form>
+        </tbody>
+    </table>
+    <div id="img_bajo">
+        <img src="" id="imagen" >
+    </div>
+</body>
+</html>

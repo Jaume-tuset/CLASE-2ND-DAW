@@ -1,0 +1,49 @@
+https://uniwebsidad.com/libros/css/capitulo-5/posicionamiento-absoluto
+
+                            POSITION
+
+    - STATTIC 
+    - RELATIVE 
+    - ABSOLUTE 
+    - FIXED 
+    - STICKY ( RELATIVE + STATIC)
+    - FLOAT
+
+    POSITION STATIC 
+   -----------------
+
+- El posicionamiento normal o estático es el modelo que utilizan por defecto los navegadores para mostrar los elementos de las páginas. 
+
+
+    POSITION RELATIVE
+   --------------------
+
+-  El posicionamiento relativo desplaza una caja respecto de su posición original establecida mediante el posicionamiento normal.
+
+- El desplazamiento relativo de una caja no afecta al resto de cajas adyacentes, que se muestran en la misma posición que si la caja desplazada no se hubiera movido de su posición original.
+
+
+    POSITION ABSOLUTE
+   --------------------
+
+- Cuando una caja se posiciona de forma absoluta, el resto de elementos de la página se ven afectados y modifican su posición. Al igual que en el posicionamiento relativo, cuando se posiciona de forma absoluta una caja es probable que se produzcan solapamientos con otras cajas.
+
+- La imagen posicionada de forma absoluta no toma como referencia su elemento contenedor <div>, sino la ventana del navegador
+
+
+
+    POSITION FIXED
+   -----------------
+
+- Cuando una caja se posiciona de forma fija, la forma de obtener el origen de coordenadas para interpretar su desplazamiento es idéntica al posicionamiento absoluto. De hecho, si el usuario no mueve la página HTML en la ventana del navegador
+
+- Es que su posición es inamovible dentro de la ventana del navegador. El posicionamiento fijo hace que las cajas no modifiquen su posición ni aunque el usuario suba o baje la página en la ventana de su navegador.
+
+
+    POSITION FLOAT
+   -----------------
+
+- Desplaza hasta la zona más a la izquierda o más a la derecha de la posición en la que originalmente se encontraba
+
+- Las cajas flotantes influyen en la disposición de todas las demás cajas. Los elementos en línea hacen sitio a las cajas flotantes adaptando su anchura al espacio libre dejado por la caja desplazada. Los elementos de bloque no les hacen sitio, pero sí que adaptan sus contenidos para que no se solapen con las cajas flotantes.
+

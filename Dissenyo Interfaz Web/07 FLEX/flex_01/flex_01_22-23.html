@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="va_ES">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./flex_01_22-23.css" />
+
+	<script>
+      /* PON TUS VARIABLES JS AQU� */
+      let elementJustificar;
+      let posXDown;
+
+      /************ FUNCI�N INICIALIZAR *******************/
+      function inicializar() {}
+
+      /********** DOMContentLoaded ***********************/
+      document.addEventListener("DOMContentLoaded", inicializar);
+    </script>
+  </head>
+  <body>
+    <h1>Container sin flex</h1>
+    <div class="container-base">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+    </div>
+
+    <h1>Container con flex</h1>
+    <div class="container-base flex-basico-00">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+    </div>
+
+    <h1>Container con flex flex-direction: column;</h1>
+    <div class="container-base flex-vertical-01">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+    </div>
+
+    <h1>Container con flex (row) sin wrap</h1>
+    <div class="container-base flex-basico-00">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+      <div class="item-base">6</div>
+      <div class="item-base">7</div>
+      <div class="item-base">8</div>
+      <div class="item-base">9</div>
+      <div class="item-base">10</div>
+    </div>
+
+    <h1>Container con flex (row) con wrap</h1>
+    <div class="container-base flex-wrap-02">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+      <div class="item-base">6</div>
+      <div class="item-base">7</div>
+      <div class="item-base">8</div>
+      <div class="item-base">9</div>
+      <div class="item-base">10</div>
+    </div>
+
+    <h1>Flow : row - reverse</h1>
+    <div class="container-base flex-rowReverse-03">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+      <div class="item-base">6</div>
+      <div class="item-base">7</div>
+      <div class="item-base">8</div>
+      <div class="item-base">9</div>
+      <div class="item-base">10</div>
+    </div>
+
+    <h1>Flow : row reverse + wrap</h1>
+    <div class="container-base flex-rowReverse-03 flex-wrap-02">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+      <div class="item-base">6</div>
+      <div class="item-base">7</div>
+      <div class="item-base">8</div>
+      <div class="item-base">9</div>
+      <div class="item-base">10</div>
+    </div>
+
+    <h1>Item Order (items)style="order:N"</h1>
+    <div class="container-base flex-wrap-02">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+      <div class="item-base" style="order: -1">6</div>
+      <div class="item-base">7</div>
+      <div class="item-base">8</div>
+      <div class="item-base">9</div>
+      <div class="item-base">10</div>
+    </div>
+
+    <h1>Reto con style="order:"</h1>
+    <div class="container-base flex-wrap-02">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base" style="order: -1">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base" style="order: -2">5</div>
+      <div class="item-base" style="order: 1">6</div>
+      <div class="item-base" style="order: 1">7</div>
+      <div class="item-base" style="order: -2">8</div>
+      <div class="item-base" style="order: -2">9</div>
+      <div class="item-base">10</div>
+    </div>
+
+    <h1>Flow : column + wrap</h1>
+    <div class="container-base flex-colwrap-04">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+      <div class="item-base">6</div>
+      <div class="item-base">7</div>
+      <div class="item-base">8</div>
+      <div class="item-base">9</div>
+      <div class="item-base">10</div>
+    </div>
+
+    <h1>Justify: flex-end;</h1>
+    <div class="container-base flex-justify-end-05">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+    </div>
+
+    <h1>Justify: space-between;</h1>
+    <div class="container-base flex-justify-between-06">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+    </div>
+
+    <h1>Justify: space-around;</h1>
+    <div class="container-base flex-justify-around-07">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+    </div>
+
+    <h1>Justify: space-evenly;</h1>
+    <div class="container-base flex-justify-evenly-08">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+    </div>
+
+    <h1>Sin align-items</h1>
+    <div class="container-alto flex-basico-00">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+    </div>
+
+    <h1>Align-items: end</h1>
+    <div class="container-alto flex-align-end-09">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+    </div>
+
+    <h1>Align-items: center</h1>
+    <div class="container-alto flex-align-center-10">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-base">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+    </div>
+    <h1>Align-items: stretch</h1>
+    <div class="container-alto flex-align-stretch-11">
+      <div class="item-sinAltura">1</div>
+      <div class="item-sinAltura">2</div>
+      <div class="item-sinAltura">3</div>
+      <div class="item-sinAltura">4</div>
+      <div class="item-sinAltura">5</div>
+    </div>
+
+    <h1>Align-items: baseline</h1>
+    <div class="container-alto flex-align-baseline-12">
+      <div class="item-base">1</div>
+      <div class="item-base">2</div>
+      <div class="item-minh">3</div>
+      <div class="item-base">4</div>
+      <div class="item-base">5</div>
+    </div>
+
+    <h1>Flow : align-content</h1>
+    <div class="container-alto flex-alignContent-flex-end-13">
+      <div class="item-base">1</div>
+      <div class="item-sinDimensiones">2</div>
+      <div class="item-sinDimensiones">micarro me lorobaro</div>
+      <div class="item-base">4</div>
+      <div class="item-sinDimensiones">5</div>
+      <div class="item-base">6</div>
+      <div class="item-sinDimensiones">7</div>
+      <div class="item-base">8</div>
+      <div class="item-minh">9</div>
+      <div class="item-sinDimensiones">10</div>
+    </div>
+
+    <h1>Atributos sobre items individuales</h1>
+    <h2>align-content + justify-content + align-items + align-self</h2>
+    <div class="container-alto flex-alignContent-flex-end-13">
+      <div class="item-base">1</div>
+      <div class="item-sinDimensiones">2</div>
+      <div class="item-sinDimensiones">micarro me lo quitaron</div>
+      <div class="item-base">4</div>
+      <div class="item-sinDimensiones">5</div>
+      <div class="item-base">6</div>
+      <div class="item-sinDimensiones">7</div>
+      <div class="item-base">8</div>
+      <div class="item-minh">9</div>
+      <div class="item-sinDimensiones">10</div>
+    </div>
+
+    <div style="height: 100px">espaciador</div>
+  </body>
+</html>

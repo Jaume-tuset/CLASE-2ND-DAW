@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01 GRID NACHO</title>
+    <link rel="stylesheet" href="nacho.css">
+  </head>
+  <script>
+    // document.addEventListener("DOMContentLoaded", inicializar());
+  </script>
+  <body>
+    <div class="unDiv">div inicial</div>
+    <br>
+    <script>
+      //generar tablas
+      let totalGrids = 10;
+      let totalCells = 8;
+
+        for(let numtablas=0;numtablas<totalGrids;numtablas++){
+            let codigo="<div> TABLA  "+numtablas+"</div>";
+            codigo +="<mi-grid class=\"gc\">"
+                for(let numCelda=0;numCelda<totalCells;numCelda++) {
+                    codigo+="<div>"+ numtablas+" - "+
+                        String.fromCharCode(numCelda+65)+"</div>";
+                }
+                codigo+="</mi-grid>";
+                document.body.innerHTML += codigo;
+            }
+
+    </script>
+
+  </body>
+</html>

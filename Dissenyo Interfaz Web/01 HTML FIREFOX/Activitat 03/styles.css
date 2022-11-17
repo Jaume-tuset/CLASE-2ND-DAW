@@ -1,0 +1,141 @@
+*{
+    width: auto;
+    padding: 0%;
+}
+
+table{
+    width: 100%;
+    padding: 1%;
+}
+
+#Marca{
+     width: 20%;
+     padding: 10px;
+     text-align: center;
+}
+
+#Modelo{
+     width: 30%;
+     padding: 10px;
+     text-align: center;
+     position: absolute;
+     top: 3.3%;
+     left: 30%;
+}
+
+#Pais{
+     width: 25%;
+     padding: 10px;
+     text-align: center;
+     position: absolute;
+     top: 3.3%;
+     right: 5%;
+}
+
+#Cilindrada_text{
+    width: 30%;
+    padding: 10px;
+    position: absolute;
+    top: 8.3%;
+
+}
+
+#tpm{
+    width: 30%;
+    padding: 10px;
+    position: absolute;
+    top: 8.3%;
+    left: 35%;
+}
+
+#cld{
+    width: 20%;
+    padding: 10px;
+    position: absolute;
+    top: 8.3%;
+    right: 5%;
+}
+
+#foto_archivo{
+    width: 30%;
+    padding: 10px;
+    position: absolute;
+    top: 15%;
+}
+
+#velocidad_maxima{
+    width: 30%;
+    padding: 10px;
+    position: absolute;
+    top: 15%;
+    left: 35%;
+}
+
+
+#comb{
+    width: 20%;
+    padding: 10px;
+    position: absolute;
+    top: 15%;
+    right: 5%;
+}
+
+#produccion{
+    width: 30%;
+    padding: 10px;
+    position: absolute;
+    top: 30%;
+}
+
+#Ci{
+    width: 25%;
+    padding: 10px;
+    position: absolute;
+    top: 28%;
+    left: 35%;
+}
+
+#color_Coche{
+    width: 20%;
+    padding: 10px;
+    position: absolute;
+    top: 28%;
+    right: 5%;
+}
+
+#color{
+    width: 35%;
+}
+
+#cx1{
+    width: 32.5%;
+    padding: 15px;
+    position: absolute;
+    top: 33%;
+    left: 1%;
+}
+#cx1 > fieldset {
+    border: 1px solid black;   
+}
+
+#cx1 > fieldset > input {
+    width: 20px;
+    padding: 1%;
+}
+
+#send_reset{
+    width: 20%;
+    padding: 10px;
+    position: absolute;
+    top: 35.5%;
+    left: 35%;
+}
+
+#img_bajo{
+    position: absolute;
+    top: 42%;
+    left: 2%;
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+}

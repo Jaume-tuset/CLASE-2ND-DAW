@@ -1,0 +1,27 @@
+body{
+    background-color: #c6c6c6;
+}
+
+h1{
+
+}
+
+.container-base{
+    background-color: lightyellow;
+}
+
+.item-base{
+    color: aliceblue;
+    background-color: purple;
+    border : 1px solid black;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    margin: 0.5em;
+    padding: 1%;
+}
+
+.flex-basico-00{
+    display: flex;
+    
+}

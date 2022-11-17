@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>01 GRID 01.1</title>
+    <!--<link rel="stylesheet" href="01_grid_row_cols.css"> -->
+  </head>
+  <script>
+    // document.addEventListener("DOMContentLoaded", inicializar());
+  </script>
+  <body>
+    <div class="unDiv">div inicial</div>
+    <script>
+      //generar tablas
+      let numGrids = 3;
+      let numCells = 8;
+      let htmlGrid = "<div id='\text\'>";
+
+      //generar 3 div que contengan 8 <div> NUM - LETRA</div>
+      for (let i = 0; i < numGrids; i++) {
+        htmlGrid += "<div> Tabla " + (i + 1) + "</div>";
+        htmlGrid +="<mi-grid class=\"gc\">"
+        for (let letra = 65; letra <= 65 + numCells; letra++) {
+          htmlGrid += "<div> " + i + " - " + String.fromCharCode(letra)+ "</div>"; //traure del numero la lletra
+        }
+        htmlGrid +="</mi-grid>";// tanca el div class=gc
+      }
+      htmlGrid += "</div>";
+      document.body.innerHTML += htmlGrid;
+    </script>
+  </body>
+</html>

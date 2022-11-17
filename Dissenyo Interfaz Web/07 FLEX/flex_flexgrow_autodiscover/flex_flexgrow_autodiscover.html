@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FLEX FLEX-GROW</title>
+    <link rel="stylesheet" href="flex_flexgrow_autodiscover.css" />
+
+    <script>
+      /* PON TUS VARIABLES JS AQU� */
+      let elementJustificar;
+      let posXDown;
+
+      //quins tenen flex grow y quiens no y el nº
+      function averiguar(){
+        let elemento=document.getElementById("objetivo");
+        //devuelve el tamaño de un elemento y su posicion relativa respecto a la ventana viewport
+        let items=contenedor.children;
+
+
+        let min=contenedor.getBoundingClientRect().width;
+
+        for(item of items){
+            let ancho=item.getBoundingClientRect().width;
+            console.log("El ancho es:"+ancho);
+            if( ancho < min ) min=ancho;
+        }
+        
+        console.log("Minimo es:"+min);
+
+        //quedarme con el pequeño y el grande
+        let pequenyo=0;
+        let grande=0;
+        for(item of items){
+            let ancho=item.getBoundingClientRect().width;
+            if( ancho > (min+0.1) ){
+                if(pequenyo != 0 && pequenyo < ancho )
+                    grande=ancho;
+                
+                if(grande != 0 && grande > ancho )
+                    pequenyo=ancho;    
+                
+                if(pequenyo==0)  pequenyo=ancho;
+                
+                if(grande==0)   grande=ancho;
+                
+                let div=grande/pequenyo;
+                
+            }
+        }
+
+        
+
+
+        /******examen ****/
+        console.log("el minimo es "+min);
+        console.log("la relacion es : "+(grande/min) / (pequenyo/min));
+
+        
+        pequenyo-=min;
+        grande-=min;
+
+        let parar=false;
+        let mult=1;
+        let rel=(grande/pequenyo);
+        let entRel=Math.floor(rel);
+        console.log("min="+min+" rel="+rel+" floor ="+entRel);
+
+        while (!parar) {
+          let res=rel*mult;
+          let dif=res-Math.round(res);
+          //convertir a positivo
+          dif=Math.abs(dif);
+          if(dif < 0,0000001 ){
+            res=mult*rel;
+            mult++;
+          }  
+          parar=true; 
+        }
+        console.log("La diferencia es de "+rel+" y el numerode ref : "+mult);   
+
+
+       
+
+    }
+
+
+
+      /************ FUNCI�N INICIALIZAR *******************/
+      function inicializar() {
+        
+      }
+
+      /********** DOMContentLoaded ***********************/
+      document.addEventListener("DOMContentLoaded", inicializar);
+    </script>
+  </head>
+  <body>
+   <body>
+    <div class="container-base flex-base" id="objetivo">
+        <div class="item-base"> content</div>
+        <div class="item-base flexgrow2"> content</div>
+        <div class="item-base"> content </div>
+        <div class="item-base flexgrow5"> content</div>
+        <div class="item-base"> content</div>
+    </div>
+
+<div style="height:100px" ></div>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+ h1,h2,h3{
+	color:green;
+	margin:0px;
+	padding:0px;
+}
+
+.importante , .relevante{
+	color:red;
+	font-weight:bold;
+}
+
+div span .importante{
+  font-family: Courier New;
+  display:inline-block;
+  border:1px dashed blue;
+}
+
+div  h2{
+	font-size:1em;
+	margin:initial;
+}
+
+div+div h1,h2 {
+	color:initial;
+	font-size:2rem;
+}
+
+.descripcion.importante{
+	background-color: lightpink;
+}
+
+{
+	border:2px solid black;
+}
+
+div div{
+	color: blue;
+} 

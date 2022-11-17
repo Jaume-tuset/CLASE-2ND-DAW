@@ -1,0 +1,39 @@
+div, span{
+    border: 1px dashed grey;
+}
+
+body > div{
+    background-color: aliceblue;
+}
+
+div > *{
+    background-color: lightpink;
+}
+
+h1 + h2{
+    color: red;
+}
+
+h1 ~ h3{
+    color: blue;
+}
+
+h3 > span {
+    color:olive;
+}
+div > span {
+    text-decoration-color: cyan ;
+    text-decoration-style: wavy;
+}
+
+div+div+p{
+    background-color: darkmagenta;
+    color: khaki;
+}
+div + h2{
+    border:2px solid blue;
+}
+ h3 ~ h1 > div {
+    background-color: chocolate;
+}
+

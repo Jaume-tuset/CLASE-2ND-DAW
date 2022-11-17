@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examen 2 JS / FLEX</title>
+    <link rel="stylesheet" href="style_Jaume.css" />
+</head>
+
+<body>
+    <div class="flex-container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+    <script>
+        let container = document.querySelector(".flex-container");
+        let elementosItems = container.children;
+
+        let min = container.getBoundingClientRect().width;
+
+            for ( item of elementosItems){
+                let ancho = item.getBoundingClientRect().width;
+                if(ancho < min){
+                    min=ancho;
+                }
+            }
+
+            let alto,bajo,centro=0;
+            let pos=["arriba","abajo","centro","arriba a abajo"]
+            for(let item=0 ; item<elementosItems.length; item++){
+                let posDef=[];
+                let posElem=item.getBoundingClientRect().width;
+                if(posElem > (min + 0.1)){
+                    if(alto != 0 && alto > posElem){
+                        bajo=posElem;
+                        posDef=pos[1];
+                    }
+                    if(bajo != 0 && bajo < posElem){
+                        alto=posElem;
+                        posDef=pos[0];
+                    }
+
+                    if(bajo != null && alto != null){
+                        centro=posElem;
+                        posDef=pos[3];
+                    }
+
+                    if(alto==0 && bajo==0){
+                        alto=posElem; 
+                        posDef=pos[4];
+                    }
+                    
+                    if(alto==0){
+                        alto=posElem; 
+                        posDef=pos[0];
+                    }
+
+                    if(bajo==0){
+                        bajo=posElem; 
+                        posDef=pos[1];
+                    }
+                    if(centro==0){
+                        centro=posElem;
+                        posDef=pos[2];
+                    } 
+                }
+
+                if(elementosItems[item].getBoundingClientRect().width == elementosItems[item+1].getBoundingClientRect().width) {
+                console.log(
+                    "Atributo configurado en el contenedor: " +posElem
+                    + ": "+posDef
+                );
+            
+            }else{
+                console.log(
+                    "atributo configurado en el elemento " +posElem
+                    + ": "+posDef
+                );
+            }
+
+            }
+
+    </script>
+
+</body>
+
+</html>

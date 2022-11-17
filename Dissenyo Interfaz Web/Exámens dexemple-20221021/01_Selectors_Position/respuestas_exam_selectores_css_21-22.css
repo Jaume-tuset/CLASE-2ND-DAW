@@ -1,0 +1,635 @@
+
+/* Josep Garzó */
+
+h1,h2{     font-size: 1em; } 
+h2{     font-weight: normal; }
+h1+h1+h2{ 
+    background-color: yellow;
+     color:green; }
+
+h2+div{
+     background-color:lightblue;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 33, 1); }
+
+ .especial{
+     color:white;
+     background-color: black; }
+
+ #descripcion + div{
+     color:magenta; }
+
+ div + #conclusion {
+     background-color: beige;
+     margin:1px 1px 1px 1px; }
+
+ #conclusion{
+     margin-left: 50px;
+     background-color: orange; }
+
+
+/*David Lopez Palop*/
+
+h1{     font-size: 1.2em;     margin: 0%; }
+
+h2:first-of-type{     
+font-size: 1.2em;
+     margin: 0%;
+     font-weight: normal;
+     text-decoration:underline; }
+
+h2{
+     font-size: 1.2em;
+     margin: 0%;
+     font-weight: normal;
+     text-decoration:underline; }
+
+  div{     font-variant: small-caps; }
+
+  .descripcion{     font-style: italic; }
+  .descripcion.p{     color: orange; }
+  .magenta{     color: magenta; }
+  .azul{     color: blue; }
+.h2{     
+	background-color: lightsteelblue;
+     box-shadow: 2px 2px 2px 1px rgba(0, 0, 33, 1);
+
+ }
+  .dentro{
+     background-color: grey;
+ }
+  .especial{
+     background-color: black;
+     color: white; 
+}
+  .conclusion{
+     background-color: beige;
+     margin: 10px; }
+  .divA{
+     border: 3px dotted darkblue;
+     background-color: orange;
+ }  
+.in{     
+    text-decoration:underline;
+ }
+  .final{
+     background-color: pink;
+     margin: 10px;
+ }
+
+
+/*** Andrés Rocher Escriva ***/
+span { /* se queda */
+ 	font-style:normal;
+ 	background-color:lightgrey;
+ }
+
+:h1{
+     margin: 0;
+     font-size: 1.2pt;
+ }
+:h2{
+     margin: 0;
+     font-size: 1.2pt;
+     font-weight: normal;
+ }
+
+div{
+     font-variant: small-caps;
+ }
+
+  h1 + h1 + h2{
+     background: yellow;
+     color: green;
+ }
+
+  h2 + div{
+     background-color: lightblue;
+     box-shadow: 2px 2px 2px 1px rgba(0, 0, 33, 1) }
+
+  p ~ *{
+     background: orange;
+ }
+
+  #divA{     border: 3px dotted darkblue; }
+
+:last-child{     background: pink; }
+
+
+
+
+/*** Pablo Bellver**** /
+
+h1, h2{
+     font-size: 120%;
+}
+ h2{
+     font-weight: normal;
+}
+ div{
+     font-variant: small-caps;
+}
+ * *> descripcion{
+     font-style: italic;
+}
+ div * *> descripcion{
+     text-decoration: underline;
+}
+ h1 *> especial{
+     color: white;
+     background-color: black;
+}
+ div ~ p * *> descripcion + div{
+     color: magenta;
+}
+ p > * *> descripcion{
+     color: orange;
+}
+ h1 + h1 + h2{
+     background-color: yellow;
+     color: green;
+}
+ h2 + div{
+     background-color: lightblue;
+     box-shadow: 2px 2px 2px 1px rgba(0, 0, 33, 1);
+}
+ div #divA{
+     border: 3px dotted darkblue;
+}
+
+
+
+/* Andreu Furió */
+
+
+h1,
+h2 {
+	font-size: 1.2rem;
+	margin: 0;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+[div*="descripcion"] {
+	font-style: italic;
+}
+
+div>* {
+	font-variant: small-caps;
+}
+
+h1+h1+h2 {
+	color: green;
+	background-color: yellow;
+}
+
+h2+div {
+	background-color: lightblue;
+	box-shadow: 1px 2px 2px 1px rgba(0, 0, 33, 1);
+}
+
+[div*="divA"] {
+	border: 3px dotted darkblue;
+}
+
+p:last-of-type {
+	background-color: pink;
+}
+
+div>[html*="descripcion"] {
+	text-decoration: underline;
+}
+
+p>[html*="descripcion"] {
+	color: orange;
+}
+
+
+/*  Ivan Oviedo Barber   */
+
+
+
+body {
+	font-size: 20px;
+}
+
+h1,
+h2 {
+	margin: 0%;
+	font-size: inherit;
+	font-size: 1.2em;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+div>* {
+	font-variant: small-caps
+}
+
+h1+h1+h2 {
+	background-color: yellow;
+	color: green;
+}
+
+h2+div {
+	background-color: lightblue;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 33, 1);
+}
+
+p>* {}
+
+
+/* Javier Garcia Pardo */
+
+
+h1,
+h2 {
+	font-size: 1.2 rem;
+	margin: 0;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+div {
+	font-variant: small-caps;
+}
+
+h1~h1~h2 {
+	background-color: yellow;
+	color: green;
+}
+
+div+h2 {
+	background-color: lightblue;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 33, 1);
+}
+
+h1+h1 {
+	background-color: black;
+	color: white;
+}
+
+div>div.descripcion {
+	color: magenta;
+}
+
+div>div:not(.descripcion) {
+	margin-left: 20px;
+	color: blue;
+}
+
+p.penultimo-parrafo {
+	color: orange;
+}
+
+p.conclusion {
+	background-color: bisque;
+	margin-left: 15px;
+}
+
+p.ultimo-parrafo {
+	background-color: palevioletred;
+}
+
+
+
+/* Samuel Giner Urbano */
+
+No entrega nada
+
+/* Alejandro Portalés Cerveró  */
+
+
+
+.descripcion {
+	font-style: italic;
+}
+
+h1 {
+	margin: 0%;
+	font-size: 1.2rem;
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 1.2rem;
+}
+
+div {
+	font-variant: small-caps;
+}
+
+h2 h1 h1 {
+	background-color: yellow;
+	color: green;
+}
+
+div>h2 {
+	background-color: lightblue;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 33, 1);
+}
+
+div>.descripcion {
+	background-color: magenta;
+}
+
+
+
+/*  Francisco Ramón Langa Rodríguez  */
+
+
+
+/*1*/
+
+h1 h2 {
+	font-size: 0;
+	margin: 0;
+}
+
+
+/*2*/
+
+h2 {
+	font-weight: normal;
+}
+
+
+/*3*/
+
+
+/*4*/
+
+
+/*5*/
+
+h1+h1~h2 {
+	color: green;
+	background-color: yellow;
+}
+
+
+/*6*/
+
+
+/*7*/
+
+h2+div {
+	background-color: lightblue;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 33, 1);
+}
+
+
+/*8*/
+
+.divEspecial {
+	background-color: black;
+	color: white;
+}
+
+
+/*9*/
+
+
+/*10*/
+
+
+/*11*/
+
+
+/*12 (en html)*/
+
+
+/*13*/
+
+.ultParrafo {
+	background-color: pink;
+}
+
+
+/*  David Pérez Palop  */
+
+
+
+h1,
+h2 {
+	font-size: 1.2em;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+div {
+	font-variant: small-caps;
+}
+
+h1 h1~h2 {
+	background-color: yellow;
+	color: green;
+}
+
+div [*"descripcion"] {
+	text-decoration: underline;
+}
+
+h2+div {
+	background-color: lightblue;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 33, 1);
+}
+
+
+/*MANEL SEBASTIAN ALVAREZ*/
+
+h1 {}
+
+h2 {}
+
+div>* {
+	font-variant: small-caps;
+}
+
+h2+div {
+	background-color: lightblue;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 33, 1);
+}
+
+div+div+h1+h1 {
+	background-color: black;
+	color: white;
+}
+
+div+div+p+p {
+	background-color: thistle;
+}
+
+
+
+/*  juan miguel gonzalez esparza  */
+
+
+
+h1,
+h2 {
+	font-size: 1.2rem;
+	margin: 0px;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+div {
+	font-variant: small-caps;
+}
+
+div p [p |="descripcion"] {
+	text-decoration: underline;
+}
+
+h1 h1 h2 {
+	color: green;
+	background-color: yellow;
+}
+
+h2 div {
+	background-color: lightblue;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 33, 1);
+}
+
+.descripcion h1+h1 {
+	background-color: black;
+}
+
+
+/* Marc Naval Lloret */
+
+
+
+.titulo1 {}
+
+.description {
+	font-style: italic;
+	font-variant: small-caps;
+	/*Poner en mayusculas*/
+}
+
+/*  Andreu Micó Bleda  */
+
+
+
+/* 9 - 10 - 11*/
+
+h1,
+h2 {
+	font-size: 1.2em;
+	margin: 0;
+}
+
+h2 {
+	font-weight: normal;
+}
+
+div * {
+	font-variant: small-caps
+}
+
+h1+h1+h2 {
+	background-color: yellow;
+	color: green;
+}
+
+h2+div {
+	background-color: lightblue;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 33, 1);
+}
+
+p:last-of-type {
+	background-color: pink;
+}
+
+span {
+	/* se queda */
+	font-style: normal;
+	background-color: lightgrey;
+	font-style: italic;
+}
+
+.descripcion {
+	font-style: italic;
+}
+
+.descripcion~div {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+div+div>div {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+p+p+div {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+h1+h1+h2+div {
+	font-style: italic;
+	text-decoration: underline;
+}
+
+
+/* Jorge Romero */
+
+
+h1, h2 {
+     font-size: 1.2 em;
+     margin: 0;
+}
+ h2{
+     font-weight: normal;
+}
+ contains("descripcion"){
+     font-style: italic;
+}
+ div{
+     font-variant: small-caps;
+}
+ h2 ~ h1 {
+     background-color: yellow;
+     color: green;
+}
+ div > contains("descripcion") {
+     text-decoration: underline;
+}
+ div ~ h2 {
+     background-color: lightblue;
+     box-shadow: 2px 2px 2px 1px rgba(0, 0, 31, 1);
+}
+ h1 + h1 {
+     background-color: black;
+     color: white;
+}
+ div > descripcion{
+     color : magenta;
+}
+ div ~ div {
+     margin-block: 0;
+     color: blue;
+}
+ p[descripcion]{
+     color: orange;
+}
+ p[conclusion] + div{
+     color: orange;
+}
+ p[conclusion] + div {
+     background-color: beige;
+     margin: small;
+}
+

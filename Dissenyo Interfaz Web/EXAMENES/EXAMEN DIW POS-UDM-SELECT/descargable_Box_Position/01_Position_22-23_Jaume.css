@@ -1,0 +1,70 @@
+/* css JAUME TUSET 2nd DAW*/
+.relleno {
+	display:flex;
+	justify-content:center;
+	align-items:center;
+
+	height:40px;
+	border:1px dashed lightgray;
+}
+
+div {
+	border:1px solid pink;
+	position: relative;
+	display: block;
+}
+
+.Ciudad {
+	padding: 1%;
+	width: 50%;
+	position: relative;
+}
+
+#Sorolla {
+	display: block;
+	background-color: rgb(255, 253, 197);
+	position: absolute;
+	top: 45%;
+	left: 10%;
+	width: 100%;
+}
+
+.Calle {
+	padding: 1.5%;
+	display: block;
+	position: relative;
+	left: 5%;
+}
+
+#Rafelguaraf{
+	position: sticky;
+	top: 0;
+	width: 50%;
+	background-color: grey;
+	font-size: 50px;
+}
+
+#dormitorio{
+	display: block;
+	position: fixed;
+	top: 10%;
+	left: 65%;
+	width: 120px;
+	background-color: yellow;
+}
+
+#Espanya{
+	display: inline-block;
+	position: static;
+	text-decoration: none;
+}
+
+
+.Partida {
+	display: block;
+	border: 2px solid green;
+}
+
+.Camino {
+	position: absolute;
+}

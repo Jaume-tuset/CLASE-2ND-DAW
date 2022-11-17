@@ -1,0 +1,38 @@
+body {
+    background-color: aquamarine;
+}
+
+.flex-container {
+    display: flex ;
+    flex-direction: row;
+    background-color:lightyellow;
+    /*2*/
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    }
+/* END */
+.item {
+    width:30px;
+    margin: .5em;
+    color:aliceblue;
+    text-align: center;
+    background-color:purple;
+}
+
+.flex-container :first-child {
+    align-self: center;
+}
+
+.flex-container :nth-child(3) {
+    align-items: baseline;
+}
+
+.flex-container :nth-child(4) {
+    align-self:flex-start;
+}
+
+.flex-container :nth-child(2),:nth-child(5)  {
+    align-self: flex-end;
+}
+

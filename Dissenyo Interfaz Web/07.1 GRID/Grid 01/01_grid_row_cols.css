@@ -1,0 +1,122 @@
+body {
+	background-color:lightyellow;
+}
+
+.gc {
+	background-color:lightgreen;
+	margin:1em;
+	margin-top:.5em;
+	margin-bottom:1.5em;
+	
+	display:grid;
+}
+
+.gc > div {
+	border:1px solid blue;
+}
+
+/* empezamos con una tabla básica. "mandan las columnas" */
+.gc:first-of-type {
+	background-color:lightblue;
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-columns: auto auto auto;
+}
+
+.gc:nth-of-type(2) {
+/* implícitamente hay una sola columna y se amplían las filas que haga falta para
+   una sola columna */
+	background-color:lightpink;
+	grid-template-rows: auto auto;
+}
+
+/* Más filas de las necesarias */
+.gc:nth-of-type(3) {
+	background-color:lightgrey;
+	grid-template-rows: auto auto auto auto auto;
+	grid-template-columns: auto auto auto;
+}
+
+/* Establecer el ancho o alto por píxeles */
+.gc:nth-of-type(4) {
+	background-color:orange;
+	grid-template-columns: 100px auto auto;
+
+}
+
+/* Establecer el ancho o alto por píxeles + fracciones */
+.gc:nth-of-type(5) {
+	background-color:lightpink;
+	grid-template-columns: 100px 2fr 5fr;
+}
+
+/* usando porcentajes y excediéndonos */
+.gc:nth-of-type(6) {
+	background-color:lightgoldenrodyellow;
+	grid-template-columns: 100px 10% 90%;
+
+}
+
+/* usando porcentajes quedándonos cortos. las columnas no alcanzan toda la tabla */
+.gc:nth-of-type(7) {
+	background-color:lightblue;
+	grid-template-columns: 10% 10% 50%; /* sólo se ocupa un 70% de la tabla */
+}
+
+/* usando porcentajes quedándonos cortos y fr lo arregla */
+.gc:nth-of-type(8) {
+	background-color:gray	;
+	grid-template-columns: 10% 1fr 50%;
+}
+
+/* repeat (número, dimensión) repite */
+.gc:nth-of-type(9) {
+	background-color:lightpink	;
+	grid-template-columns: 100px repeat(3,1fr) repeat(2,2fr);
+}
+
+
+/* min-max  frente a auto auto (el contenido manda maś)*/
+.gc:nth-of-type(10) {
+	background-color:lightgreen	;
+	grid-template-columns:minmax(500px,600px) auto auto ;
+}
+
+/* min-max  frente a fr. El contenido no manda tanto*/
+.gc:nth-of-type(11) {
+	background-color:darkgreen;
+	grid-template-columns:minmax(300px,500px) 1fr 1fr ;
+}
+
+/* min-content*/
+.gc:nth-of-type(12) {
+	background-color:lightgreen	;
+	grid-template-columns:minmax(300px,500px) auto auto ;
+}
+
+/* Sólo si establecemos una  altura parala tabla, funciona
+laasignación de porcentaje en grid-template-rows*/
+.gc:nth-of-type(13) {
+	height:400px;
+	background-color:yellow	;
+	grid-template-columns:auto auto ;
+	grid-template-rows: 80px 50% 2fr 1fr ;
+}
+
+/* tabla con contenido grande para min-content y max-content */
+.grid-content1{
+	display:grid;
+	grid-template-columns: auto 50px min-content max-content;
+
+}
+
+.grid-content2{
+	display:grid;
+	grid-template-columns: auto 150px minmax(min-content,max-content) minmax(min-content,max-content);
+
+}
+
+.item {
+	border:1px solid grey;
+}
+
+

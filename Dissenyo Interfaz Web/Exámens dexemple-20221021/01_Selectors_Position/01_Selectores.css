@@ -1,0 +1,57 @@
+h1, h2 {
+	font-size:1.2em;
+	margin:0em 0em;
+}
+
+h2 {
+	font-weight:normal;
+	text-decoration:underline;
+}
+
+.descripcion { 	font-style: italic; }
+
+div > * { 	font-variant: small-caps; 	}
+
+h1 + h1 + h2 { 
+	background-color:yellow;
+	color:green;
+}
+
+div > .descripcion { text-decoration:underline;}
+
+span { /* se queda */
+	font-style:normal;
+	background-color:lightgrey;
+}
+
+h2 + div{
+	background-color:lightblue;
+	box-shadow: 2px 2px 2px 1px rgba(0, 0, 33, 1);
+}
+
+#especial {
+	background-color:black;
+	color:white;
+	}
+
+.descripcion + div {  color:magenta; }
+
+.descripcion + div ~ div{
+	margin:0em 1em;;
+	color:blue;
+}
+
+p.descripcion  { color:orange; }
+
+#final { background-color:pink; }
+
+#divA{	border:3px dotted darkblue;}
+
+div ~ p.conclusion {
+	margin:.2em 3em;
+	background-color:beige;
+}
+
+p + div { background-color:orange; }
+
+.

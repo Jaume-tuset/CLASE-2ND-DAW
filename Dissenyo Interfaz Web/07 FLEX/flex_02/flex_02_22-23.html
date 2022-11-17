@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="va_ES">
+<head>
+<meta charset="utf-8" />
+
+<link rel="stylesheet" type="text/css" href="./flex_02_22-23.css">
+
+<style>
+      
+/**********  PON TUS ESTILOS AQU� ****************/
+
+</style>
+
+<script>
+/* PON TUS VARIABLES JS AQU� */
+let elementJustificar;
+let posXDown;
+
+
+/************ FUNCI�N INICIALIZAR *******************/
+function inicializar(){
+
+}
+
+/********** DOMContentLoaded ***********************/
+document.addEventListener("DOMContentLoaded", inicializar);
+</script>
+
+</head>
+<body>
+<h1> Atributos sobre items individuales </h1> 
+
+<h2> align-content + justify-content + align-items</h2>
+<div class="container-alto flex-inicial" >
+	<div class="item-base"> 1 </div>
+	<div class="item-sinDimensiones"> 2 </div>
+	<div class="item-sinDimensiones"> micarro me lorobaro </div>
+	<div class="item-base"> 4 </div>	
+	<div class="item-sinDimensiones"> 5 </div>
+	<div class="item-base"> 6 </div>
+	<div class="item-sinDimensiones"> 7 </div>
+	<div class="item-base"> 8 </div>
+	<div class="item-minh"> 9 </div>	
+	<div class="item-sinDimensiones"> 10 </div>
+</div>
+
+
+<h2> align-content + justify-content + align-items + align-self</h2>
+<div class="container-alto flex-inicial" >
+	<div class="item-base"> 1 </div>
+	<div class="item-sinDimensiones"> 2 </div>
+	<div class="item-sinDimensiones"> micarro me lorobaro </div>
+	<div class="item-base"> 4 </div>	
+	<div class="item-sinDimensiones"> 5 </div>
+	<div class="item-base"> 6 </div>
+	<div class="item-sinDimensiones"> 7 </div>
+	<div class="item-base"> 8 </div>
+	<div class="item-minh"> 9 </div>	
+	<div class="item-sinDimensiones"> 10 </div>
+</div>
+
+
+
+<h3> Container base e items base  </h3>
+<div class="descripcion">  Nada especial, comprueba que los items se estrujan. Purpura es "item base"</div>
+<div class="container-base flex-base">
+	<div class="item-base"> 1 1</div>
+	<div class="item-base"> 20 2</div>
+	<div class="item-base"> 3000  30</div>
+	<div class="item-base"> 400000000  4</div>
+	<div class="item-base"> 50000000000 500 5</div>
+	<div class="item-base"> 1 1</div>
+	<div class="item-base"> 20 2</div>
+	<div class="item-base"> 3000  30</div>
+	<div class="item-base"> 4000000  4</div>
+	<div class="item-base"> 50000000000  5</div>
+</div>
+
+
+<h3> Container base e items base + flex-basis </h3>
+<div class="descripcion">  Elementos en verde "olive" flex-basis:4em </div>
+<div class="container-base flex-base">
+	<div class="item-base flex-basis4em"> 1 1</div>
+	<div class="item-base flex-basis4em"> 20 2</div>
+	<div class="item-base"> 3000  30</div>
+	<div class="item-base "> 400000000  4</div>
+	<div class="item-base flex-basis4em"> 50000000000 500 5</div>
+	<div class="item-base"> 1 1</div>
+	<div class="item-base"> 20 2</div>
+	<div class="item-base flex-basis4em"> 3000  30</div>
+	<div class="item-base"> 4000000  4</div>
+	<div class="item-base"> 50000000000  5</div>
+</div>
+
+
+<h3> Container base e items base + flex-basis </h3>
+<div class="descripcion">  Elementos en verde "olive" flex-basis:4em. Azul son flex-basis:1em; </div>
+<div class="container-base flex-base">
+	<div class="item-base flex-basis4em"> 1 1</div>
+	<div class="item-base flex-basis4em"> 20 2</div>
+	<div class="item-base flex-basis1em"> 3000  30</div>
+	<div class="item-base flex-basis4em"> 400000000  4</div>
+	<div class="item-base flex-basis4em"> 50000000000 500 5</div>
+	<div class="item-base flex-basis1em"> 1 1</div>
+	<div class="item-base flex-basis1em"> 20 2</div>
+	<div class="item-base flex-basis4em"> 3000  30</div>
+	<div class="item-base flex-basis4em"> 4000000  4</div>
+	<div class="item-base flex-basis1em"> 50000000000  5</div>
+</div>
+
+<h3> flex-basis & width vs (contenido):</h3>
+<div class="descripcion">  Elementos en verde "olive" flex-basis:4em. Azul son flex-basis:1em  naranja: width:10px; </div>
+<div class="container-base flex-base">
+	<div class="item-base flex-basis4em"> 1 1</div>
+	<div class="item-base anchura10px"> 20 2</div>
+	<div class="item-base flex-basis1em"> 3000  30</div>
+	<div class="item-base flex-basis4em"> 400000000  4</div>
+	<div class="item-base anchura10px"> 50000000000 500 5</div>
+	<div class="item-base flex-basis1em"> 1 1</div>
+	<div class="item-base anchura10px"> 20 2</div>
+	<div class="item-base flex-basis4em"> 3000  30</div>
+	<div class="item-base flex-basis4em"> 4000000  4</div>
+	<div class="item-base flex-basis1em"> 50000000000  5</div>
+</div>
+
+<h3> flex-basis vs width. </h3>
+<div class="descripcion"> 	rosa = flex-basis:4em; + 	width:10px;  </div>
+<div>OJO!! parece que "gana" flex-basis, pero loque hace es tomar fuerza de width para establecer un ancho porencima de tó</div>
+<div class="container-base flex-base">
+	<div class="item-base fbasisvswidth"> 1 1</div>
+	<div class="item-base "> 20 2</div>
+	<div class="item-base "> 3000  30</div>
+	<div class="item-base fbasisvswidth"> 400000000  4</div>
+	<div class="item-base "> 50000000000 500 5</div>
+	<div class="item-base "> 1 1</div>
+	<div class="item-base fbasisvswidth"> 20 2</div>
+	<div class="item-base "> 3000  30</div>
+	<div class="item-base fbasisvswidth"> 4000000  4</div>
+	<div class="item-base "> 50000000000  5</div>
+</div>
+
+
+<h3> Crecimiento con espacio de sobra  </h3>
+<div class="descripcion">  purpura normal, verde flex-grow:1;</div>
+<div class="container-base flex-base">
+	<div class="item-base"> 1 1</div>
+	<div class="item-base"> 20 2</div>
+	<div class="item-base flexgrow1"> 3000  30</div>
+	<div class="item-base"> 400000  4</div>
+	<div class="item-base"> 50000000 500 5</div>
+	<div class="item-base"> 1 1</div>
+	<div class="item-base flexgrow1"> 20 2</div>
+	<div class="item-base"> 3000  30</div>
+	<div class="item-base"> 4000000  4</div>
+	<div class="item-base"> 5000000  5</div>
+</div>
+
+<h3> Crecimiento desigual con espacio de sobra  </h3>
+<div class="descripcion">  purpura normal, verde flex-grow:1; verdeclaro flex-grow: 4</div>
+<div class="container-base flex-base">
+	<div class="item-base"> 1 1</div>
+	<div class="item-base flexgrow4"> 20 2</div>
+	<div class="item-base flexgrow1"> 3000  30</div>
+	<div class="item-base"> 400000  4</div>
+	<div class="item-base"> 5000000  5</div>
+</div>
+
+<h3> flex-basis vs flex-shrink  </h3>
+<div class="descripcion">  <ul>
+		<li>darkcyan: flex-basis:10em + flex-shrink:0;</li>
+		<li>crimson: flex-basis:10em</li>	
+	</ul>		
+		</div>
+<div class="container-base flex-base">
+	<div class="item-base fbasis10"> 1 1</div>
+	<div class="item-base fbasis10shrink0"> 20 2</div>
+	<div class="item-base fbasis10"> 3000  30</div>
+	<div class="item-base fbasis10"> 400000  4</div>
+	<div class="item-base fbasis10"> 5000000  5</div>
+</div>
+
+<h3> (repetimos) flex-basis vs flex-shrink  </h3>
+<div class="descripcion">  <ul>
+		<li>darkcyan: flex-basis:10em + flex-shrink:0;</li>
+		<li>crimson: flex-basis:10em</li>	
+	</ul>		
+		</div>
+<div class="container-base flex-base">
+	<div class="item-base fbasis10"> 1 1</div>
+	<div class="item-base fbasis10shrink0"> 20 2</div>
+	<div class="item-base fbasis10"> 300000  30</div>
+	<div class="item-base fbasis10"> 40000000  4</div>
+	<div class="item-base fbasis10"> 5000000000000  5</div>
+</div>
+<h3> flex-basis vs flex-shrink vs min-width </h3>
+<div class="descripcion">  <ul>
+		<li>lightsalmon: flex-basis:10em + flex-shrink:0; min-width:5em</li>
+		<li>darkblue: flex-basis:5em + min- width:10em</li>	
+		<li>crimson: flex-basis:10em</li>	
+	</ul>		
+		</div>
+<div class="container-base flex-base">
+	<div class="item-base fbmw"> 1 1</div>
+	<div class="item-base fbfsmw"> 20 2</div>
+	<div class="item-base fbmw"> 300000  30</div>
+	<div class="item-base fbasis10"> 40000000  4</div>
+	<div class="item-base fbmw"> 5000000000000  5</div>
+</div>
+
+<div style="height:100px" > espaciador</div>
+</body>
+</html>
+
