@@ -1,0 +1,12 @@
+ TEST 
+
+- DESCRIBE IT
+  -> describe("Array", function(){
+    it(())
+    expect()
+    })
+  -> npm, Mocha, webpack
+
+- JASMINE
+- MOCHA + CHAI
+  -> mocha / chai / hooks 

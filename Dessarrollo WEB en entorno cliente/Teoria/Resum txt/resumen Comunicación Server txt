@@ -1,0 +1,30 @@
+COMUNICACIÓN CON EL SERVIDOR
+
+- AJAX 
+  -> Context / Call Stack
+  -> Event Loop / Pila / Cua
+  -> Callback 
+
+- XMLHTTPREQUEST
+  -> open / send
+  -> .readyState / status / onreadystatechange / responseText
+  -> FormData 
+  -> Convertir a JSON : JSON.stringify(Object.fromEntries(formData));
+  -> XHR : 
+      · makeRequest / open / onload / oncomplete / onerror / send / 
+      · request / response 
+  -> Api : 
+    · GET / PUT / DELETE / POST / PATCH
+
+- PROMISES
+  -> new Promise( resolve , reject ) => { } .then / .catch  /*Sino es una cosa es la otra*/
+
+- FETCH 
+  -> fetch : localizacion JSON 
+  -> response.status : estat de descarrega / response.json() : transforma json a Objecte
+
+- ASYNC AWAIT
+  -> async function 
+          await fetch ( json )
+          await response.json()
+          

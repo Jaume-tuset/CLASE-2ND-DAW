@@ -1,0 +1,1 @@
+.code{font-size:smaller;margin:10px;padding:10px;color:#5F5;background-color:#222}

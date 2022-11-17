@@ -1,0 +1,74 @@
+JAVASCRIPT EVAL 1
+   
+- typeOf()
+
+- Funciones : 
+	-> variable 
+	-> Fletxa
+	-> call,apply,bind
+
+- Elements de llenguatge
+	-> Operadores comparación
+	-> Arrays
+		· recorrer
+		· buscar 
+		· operaciones {
+			splice() -> eliminar elementos o agregar
+			slice() -> extreure porcio array 
+			flat() -> convertir multidimensional a arrays de menys dimensions
+			flatMap() -> funcion y conversio
+			join() -> transformar array a cadena 
+			split() -> transformar cadena a array 
+		}
+	-> strict
+
+- Objetos y clases 
+	-> for in / of 
+	-> Date 
+	-> Array {
+		join([elemento separador]): crear cadena amb elements de l'array amb un separador
+		push() : clava elements al final
+		pop() : trau l'ultim element y l'elimina de l'array
+		reverse()
+		sort()
+		slice(inici,[final]): trau els elements entre inici-final
+	}
+	-> Math
+	
+	-> Objectes : 
+		- prototype 
+		- Linkage
+		- Object.assign({},originalObjetct) : copiar objetos de clases 
+		- greet()
+		- this / that
+	
+- DOM 
+	-> elementos (id,tagname,class,querySelector)
+	-> elementos js : 
+				innerHTML/Text
+				.append
+				.prepend
+				.after/.before
+				.cloneNode(deep)
+				.remove()
+				.className()
+				.style
+				.removeChild()/appendChild()
+
+
+- FORMULARIS 
+	-> 
+
+- ESDEVENIMENTS
+    -> Events / Handlers ( "click", onclick )
+    -> addEventListener / removeEventListener
+    -> 
+
+- ITERADORS
+    -> Array / Set / Map / String
+    -> tabla comparativa nº92
+
+- MODULS
+    -> <script type="module" src="....js">
+    -> js => imports / exports
+    -> 
