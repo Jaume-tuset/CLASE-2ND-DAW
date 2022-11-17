@@ -1,0 +1,52 @@
+FLEX 
+- DISPLAY : FLEX
+
+    //se movera lateralmente 
+    flex-direction: row; => empezara desde la izquierda a la derecha           
+    flex-direction: row-reverse;  => empezara desde la derecha a la izquierda
+    
+    //se movera de arriba a abajo
+    flex direction: column;         
+    flex-direction: column-reverse;  => 
+
+    //se reparten entre otras lineas
+    flex-wrap:wrap;
+
+    //flex-direction + flex-wrap
+    flex-flow : flex-wrap; 
+
+    PROPIEDADES ASIGNADAS AL FLEX
+    ------------------------------
+
+    flex-grow:1; -> FACTOR DE CRECIMIENTO DE UN ELEMENTO FLEXIBLE (NUMBER / INHERIT / INITIAL / UNSET)
+    
+    flex-shrink:0; -> SE ENCOGEN HASTA LLENAR EL ESPACIO DE ACUERDO AL NUMERO
+
+    flex-basis:10em; -> TAMAÑO INICIAL DE UN ELEMENTO FLEXIBLE ( NUMERO / AUTO / MAX/FIT/MIN-CONTENT / CONTENT / FILL)
+
+
+    ALINEACIÓN : ALIGN-ITEMS
+    ------------------------
+
+    align-items: stretch; -> ocupan todo el ancho permitido
+
+    align-items: flex-start; -> todos arriba mirando abajo 
+
+    align-items: center; -> todos centrados
+
+    align-items: baseline;
+
+    align-items: flex-end; -> todos abajo y tirando hacia arriba
+
+
+
+
+    align-self:flex-start;  
+
+	align-content:flex-start;
+
+
+	justify-content: flex-end;
+    justify-content: space-between;
+    justify-content: space-around;
+    justify-content: space-evenly;
