@@ -1,0 +1,29 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix='c'%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link href="webjars/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<title>${pagina.getTitulo()}</title>
+<style>
+	.footer {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		height: 60px;
+		background-color: #f5f5f5;
+	}
+</style>
+</head>
+<body>   
+                                                  mi-primera-webapp-jee/src/main/webapp/WEB-INF/jspf/footer.jspf                                      000664  001750  001750  00000000537 14312632226 024545  0                                                                                                    ustar 00pablo                           pablo                           000000  000000                                                                                                                                                                         <footer class="footer">
+	<script src="webjars/jquery/3.5.1/jquery.min.js"></script>
+	<script src="webjars/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="webjars/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</div>
+
+		
+
+</body>
+</html>
