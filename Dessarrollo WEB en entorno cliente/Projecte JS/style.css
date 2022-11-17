@@ -1,0 +1,91 @@
+.form-inline{
+    width: 970px;
+    display: block;
+    margin-left: 50%;
+}
+.form-inline > input{
+    width: 80%;
+    display: inline-block;
+}
+
+.form-inline > svg {
+    width: 35px;
+    height: 40px;
+    border-radius: 25%;
+    display: inline-block;
+    background-color: #fff;
+}
+
+
+.navbar { 
+    background-color: #484848; 
+}
+
+.navbar .navbar-nav .nav-link { 
+    color: #fff; 
+}
+.navbar .navbar-nav .nav-link:hover { 
+    color: #fbc531; 
+}
+.navbar .navbar-nav .active > .nav-link { 
+    color: #fbc531;
+}
+
+footer a.text-light:hover { 
+    color: #fed136!important; 
+    text-decoration: none; 
+}
+
+footer .cizgi { 
+    border-right: 1px solid #535e67;
+}
+
+@media (max-width: 992px) { 
+    footer .cizgi { 
+        border-right: none; 
+    } 
+}
+
+/*
+
+body .card{
+    display: inline-block;
+    width: 50%;
+    position: relative;
+}
+
+.card-img-top{
+    width: 40%;
+    padding: 4%;
+}
+
+.card-title{
+    background-color: #c6c6c6;
+    padding: 1%;
+    text-align: center;
+
+}
+
+.card-body{
+    width: 40%;
+    padding: 2%;
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 45%;
+
+}
+
+
+.card-body p{
+    display: block;
+    padding: 2%;
+}
+
+.card-body a{
+    border: 2px solid yellow;
+    background-color: #6b6b6b ; 
+    color : white;
+
+}
+*/
